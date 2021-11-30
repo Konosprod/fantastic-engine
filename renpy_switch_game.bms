@@ -1,0 +1,21 @@
+# Renpy Switch Game
+# script for quickbms
+# by Allen
+
+comtype lz4
+get magic long
+get bpp long
+get width long
+get height long
+get SIZE long
+get ZSIZE long
+get name basename
+
+string name + ".dcmp"
+savepos OFFSET
+log MEMORY_FILE 0 0
+clog MEMORY_FILE OFFSET ZSIZE SIZE
+get SIZE long MEMORY_FILE
+get ZSIZE long MEMORY_FILE
+savepos OFFSET MEMORY_FILE
+clog name OFFSET ZSIZE SIZE MEMORY_FILE
