@@ -9,7 +9,7 @@ def b2i(b):
 
 def save_to_png(width, height, data, filename):
     img = Image.frombytes('RGBA', (width,height), data)
-    img.save(filename)
+    img.save(sys.argv[2])
 
 def main():
     with open(sys.argv[1], "rb") as f:
